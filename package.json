@@ -1,0 +1,16 @@
+{
+  "name": "ai-chain-dashboard-guides",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress docs --host 0.0.0.0",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs --host 0.0.0.0",
+    "screenshots": "playwright install chromium && node scripts/capture-screenshots.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "vitepress": "^1.6.4"
+  }
+}
