@@ -182,3 +182,409 @@
 :root:not(.dark) .VPFeature {
   color: #effff8;
 }
+
+/* Dark landing redesign: an industrial market atlas rather than a default docs hero. */
+.dark:has(.VPContent.is-home) body,
+.dark:has(.VPContent.is-home) #app,
+.dark .VPContent.is-home {
+  min-height: 100vh;
+  background: #050908;
+}
+
+.dark .VPHome {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(115deg, rgba(6, 15, 13, 0.96) 0%, rgba(7, 24, 20, 0.9) 44%, rgba(23, 27, 13, 0.86) 100%),
+    radial-gradient(circle at 18% 18%, rgba(51, 230, 179, 0.22), transparent 28rem),
+    radial-gradient(circle at 78% 16%, rgba(214, 255, 114, 0.16), transparent 24rem),
+    #050908;
+  isolation: isolate;
+}
+
+.dark .VPHome::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  content: "";
+  background:
+    linear-gradient(rgba(214, 255, 114, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(214, 255, 114, 0.045) 1px, transparent 1px),
+    linear-gradient(115deg, transparent 0 48%, rgba(51, 230, 179, 0.08) 48.2% 48.6%, transparent 49% 100%);
+  background-size: 72px 72px, 72px 72px, 100% 100%;
+  mask-image: radial-gradient(ellipse at center, #000 0 58%, transparent 82%);
+}
+
+.dark .VPHome::after {
+  position: absolute;
+  right: -18rem;
+  top: 7rem;
+  z-index: -1;
+  width: 58rem;
+  height: 58rem;
+  content: "";
+  border: 1px solid rgba(214, 255, 114, 0.16);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(51, 230, 179, 0.12), transparent 58%),
+    repeating-conic-gradient(from 8deg, rgba(214, 255, 114, 0.10) 0deg 1deg, transparent 1deg 13deg);
+  filter: blur(0.2px);
+  opacity: 0.72;
+}
+
+.dark .VPNavBar.home {
+  background: linear-gradient(180deg, rgba(5, 9, 8, 0.88), rgba(5, 9, 8, 0.46));
+  border-bottom: 1px solid rgba(214, 255, 114, 0.12);
+  backdrop-filter: blur(18px) saturate(1.2);
+}
+
+.dark .VPNavBar.home .title {
+  color: #f2fff8;
+  letter-spacing: 0.01em;
+}
+
+.dark .VPNavBar.home .VPNavBarMenuLink,
+.dark .VPNavBar.home .VPNavBarMenuGroup .button {
+  color: #c7ddd4;
+}
+
+.dark .VPNavBar.home .VPNavBarMenuLink.active,
+.dark .VPNavBar.home .VPNavBarMenuLink:hover {
+  color: #33e6b3;
+}
+
+.dark .VPHome .VPHero {
+  padding-top: 118px;
+  padding-bottom: 58px;
+}
+
+.dark .VPHome .VPHero .container {
+  position: relative;
+}
+
+.dark .VPHome .VPHero .main {
+  max-width: 700px;
+}
+
+.dark .VPHome .VPHero .name {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+  background: linear-gradient(98deg, #d6ff72 0%, #33e6b3 44%, #f3fff8 86%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(48px, 6vw, 92px);
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+  text-shadow: 0 0 44px rgba(51, 230, 179, 0.14);
+}
+
+.dark .VPHome .VPHero .name::before {
+  display: block;
+  margin-bottom: 18px;
+  content: "USER OPERATIONS MANUAL / LIVE TERMINAL";
+  color: #ffb84d;
+  font-family: var(--vp-font-family-mono);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-shadow: none;
+}
+
+.dark .VPHome .VPHero .text {
+  max-width: 760px;
+  color: #effff8;
+  font-size: clamp(42px, 5.2vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.07em;
+}
+
+.dark .VPHome .VPHero .tagline {
+  max-width: 640px;
+  margin-top: 28px;
+  color: #bdd7cd;
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+.dark .VPHome .VPHero .actions {
+  gap: 14px;
+  padding-top: 34px;
+}
+
+.dark .VPHome .VPHero .action .VPButton {
+  height: 52px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.dark .VPHome .VPHero .action .VPButton.brand {
+  border: 1px solid rgba(214, 255, 114, 0.38);
+  background: linear-gradient(135deg, #d6ff72 0%, #33e6b3 76%);
+  color: #06100d;
+  box-shadow: 0 18px 54px rgba(51, 230, 179, 0.32);
+}
+
+.dark .VPHome .VPHero .action .VPButton.alt {
+  border: 1px solid rgba(243, 255, 248, 0.2);
+  background: rgba(243, 255, 248, 0.08);
+  color: #f3fff8;
+  backdrop-filter: blur(12px);
+}
+
+.dark .VPHome .VPHero .image {
+  transform: translate(22px, -8px) rotate(-1.5deg);
+}
+
+.dark .VPHome .VPHero .image-container {
+  width: min(500px, 34vw);
+  height: auto;
+  transform: none;
+}
+
+.dark .VPHome .VPHero .image-bg {
+  width: 102%;
+  height: 102%;
+  border: 1px solid rgba(214, 255, 114, 0.22);
+  border-radius: 32px;
+  background:
+    linear-gradient(135deg, rgba(214, 255, 114, 0.16), rgba(51, 230, 179, 0.06)),
+    rgba(5, 9, 8, 0.68);
+  box-shadow: 0 34px 110px rgba(0, 0, 0, 0.55), 0 0 0 12px rgba(255, 255, 255, 0.025);
+  filter: none;
+}
+
+.dark .VPHome .VPHero .image-bg::before {
+  position: absolute;
+  inset: 16px;
+  content: "";
+  border: 1px solid rgba(51, 230, 179, 0.18);
+  border-radius: 22px;
+}
+
+.dark .VPHome .VPHero .image-src {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  border: 1px solid rgba(214, 255, 114, 0.18);
+  border-radius: 18px;
+  filter: saturate(1.08) contrast(1.04);
+  box-shadow: 0 22px 64px rgba(0, 0, 0, 0.42);
+}
+
+.dark .VPHome .VPFeatures {
+  padding-top: 18px;
+  padding-bottom: 52px;
+}
+
+.dark .VPHome .VPFeatures .container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dark .VPHome .VPFeature {
+  position: relative;
+  min-height: 172px;
+  overflow: hidden;
+  border: 1px solid rgba(214, 255, 114, 0.22) !important;
+  border-radius: 26px;
+  background:
+    linear-gradient(145deg, rgba(9, 26, 21, 0.92), rgba(5, 9, 8, 0.8)) !important;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+}
+
+.dark .VPHome .VPFeature::before {
+  display: block;
+  margin-bottom: 28px;
+  color: #ffb84d;
+  font-family: var(--vp-font-family-mono);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.22em;
+  content: "MODULE 0" counter(feature-counter);
+}
+
+.dark .VPHome .VPFeatures .container {
+  counter-reset: feature-counter;
+}
+
+.dark .VPHome .VPFeature {
+  counter-increment: feature-counter;
+}
+
+.dark .VPHome .VPFeature::after {
+  position: absolute;
+  right: -30px;
+  bottom: -42px;
+  width: 150px;
+  height: 150px;
+  content: "";
+  border: 1px solid rgba(51, 230, 179, 0.14);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(51, 230, 179, 0.12), transparent 62%);
+}
+
+.dark .VPHome .VPFeature .title {
+  color: #f2fff8;
+  font-size: 20px;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+
+.dark .VPHome .VPFeature .details {
+  padding-top: 14px;
+  color: #bad6cb;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.dark .VPHome .vp-doc {
+  position: relative;
+  max-width: 1180px;
+  padding-bottom: 96px;
+  color: #dcefe8;
+}
+
+.dark .VPHome .vp-doc h2 {
+  margin-top: 10px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(214, 255, 114, 0.22);
+  color: #f3fff8;
+  font-size: 30px;
+  letter-spacing: -0.05em;
+}
+
+.dark .VPHome .vp-doc ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 18px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.dark .VPHome .vp-doc li {
+  position: relative;
+  min-height: 68px;
+  margin: 0;
+  padding: 18px 18px 18px 48px;
+  border: 1px solid rgba(51, 230, 179, 0.16);
+  border-radius: 18px;
+  background: rgba(5, 12, 10, 0.54);
+  color: #c5ddd3;
+}
+
+.dark .VPHome .vp-doc li::before {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 1px solid rgba(214, 255, 114, 0.7);
+  border-radius: 999px;
+  background: rgba(51, 230, 179, 0.9);
+  box-shadow: 0 0 18px rgba(51, 230, 179, 0.55);
+}
+
+.dark .VPHome .vp-doc a {
+  color: #33e6b3;
+  font-weight: 800;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 960px) {
+  .dark .VPHome .VPHero {
+    padding-top: 86px;
+  }
+
+  .dark .VPHome .VPHero .image {
+    margin-top: 36px;
+    transform: none;
+  }
+
+  .dark .VPHome .VPHero .image-container {
+    width: min(560px, 86vw);
+  }
+
+  .dark .VPHome .VPFeatures .container,
+  .dark .VPHome .vp-doc ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Correct VitePress feature wrappers after the dark landing layout override. */
+.dark .VPHome .VPFeatures .container {
+  display: block;
+  max-width: 1180px;
+}
+
+.dark .VPHome .VPFeatures .items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.dark .VPHome .VPFeatures .item,
+.dark .VPHome .VPFeatures .grid-3.item,
+.dark .VPHome .VPFeatures .VPFeature,
+.dark .VPHome .VPFeatures .VPFeature .box {
+  width: 100%;
+  height: 100%;
+}
+
+.dark .VPHome .VPFeatures .VPFeature {
+  padding: 0;
+}
+
+.dark .VPHome .VPFeatures .VPFeature .box {
+  position: relative;
+  z-index: 1;
+  display: block;
+  min-height: 190px;
+  padding: 28px;
+  background: transparent;
+}
+
+.dark .VPHome .VPFeature::before {
+  margin-bottom: 32px;
+}
+
+.dark .VPHome .VPHero .image {
+  transform: translate(8px, 26px) rotate(-1.5deg);
+}
+
+.dark .VPHome .VPHero .image-container {
+  width: min(460px, 32vw);
+}
+
+@media (max-width: 960px) {
+  .dark .VPHome .VPFeatures .items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* VitePress centers hero images with translate(-50%, -50%); use a real framed card instead. */
+.dark .VPHome .VPHero .image-container {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.dark .VPHome .VPHero .image-bg {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+}
+
+.dark .VPHome .VPHero .image-src {
+  top: auto;
+  left: auto;
+  transform: none;
+}
