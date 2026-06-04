@@ -110,3 +110,75 @@
     border-radius: 18px;
   }
 }
+
+/* Keep the landing page legible when VitePress is switched to light mode.
+   The hero intentionally stays terminal-dark, so it needs its own text tokens. */
+
+:root:not(.dark):has(.VPContent.is-home) body,
+:root:not(.dark):has(.VPContent.is-home) #app,
+:root:not(.dark) .VPContent.is-home {
+  background: #07130f;
+}
+
+:root:not(.dark) .VPHome {
+  --vp-c-text-1: #f3fff8;
+  --vp-c-text-2: #c7ddd4;
+  --vp-c-text-3: #8fb2a5;
+  --vp-c-bg-soft: rgba(13, 35, 29, 0.78);
+  --vp-c-bg-alt: rgba(8, 22, 18, 0.9);
+  --vp-c-default-1: #f3fff8;
+  --vp-c-default-2: #d7e7e0;
+  --vp-c-default-3: #aebfb7;
+  --vp-c-default-soft: rgba(243, 255, 248, 0.14);
+}
+
+:root:not(.dark) .VPNavBar.home {
+  --vp-c-text-1: #eefcf6;
+  --vp-c-text-2: #c2d8cf;
+  --vp-c-text-3: #91aa9f;
+  --vp-c-brand-1: #14b985;
+}
+
+:root:not(.dark) .VPNavBar.home {
+  background: linear-gradient(180deg, rgba(7, 19, 15, 0.82), rgba(7, 19, 15, 0.44));
+  border-bottom: 1px solid rgba(214, 255, 114, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+:root:not(.dark) .VPNavBar.home .title,
+:root:not(.dark) .VPNavBar.home .VPNavBarMenuLink,
+:root:not(.dark) .VPNavBar.home .VPNavBarMenuGroup .button {
+  color: var(--vp-c-text-2);
+}
+
+:root:not(.dark) .VPNavBar.home .VPNavBarMenuLink.active {
+  color: var(--guide-mint);
+}
+
+:root:not(.dark) .VPHero .text,
+:root:not(.dark) .VPHero .tagline,
+:root:not(.dark) .VPFeatures .title,
+:root:not(.dark) .VPFeatures .details,
+:root:not(.dark) .VPHome .vp-doc {
+  color: var(--vp-c-text-1);
+}
+
+:root:not(.dark) .VPHero .tagline,
+:root:not(.dark) .VPFeatures .details,
+:root:not(.dark) .VPHome .vp-doc li {
+  color: var(--vp-c-text-2);
+}
+
+:root:not(.dark) .VPHome .vp-doc h2 {
+  color: #effff8;
+  border-top-color: rgba(214, 255, 114, 0.18);
+}
+
+:root:not(.dark) .VPHome .vp-doc a {
+  color: #24dba1;
+  text-decoration-color: rgba(36, 219, 161, 0.45);
+}
+
+:root:not(.dark) .VPFeature {
+  color: #effff8;
+}
