@@ -26,7 +26,7 @@ features:
 ## 快速入口
 
 - 第一次进入平台，先读 [登录与权限](/login) 和 [主看板](/dashboard)。
-- 想管理自选和文章，读 [组合树](/portfolio-sidebar)、[数据视图](/dataview)、[文档节点](/markdown-mdx)。
+- 想管理账户仓位，读 [持仓](/holdings)；想管理自选和文章，读 [组合树](/portfolio-sidebar)、[数据视图](/dataview)、[文档节点](/markdown-mdx)。
 - 想看行情，读 [图表](/chart) 和 [公司详情](/stock-detail)。
 - 想发现机会，读 [组合广场](/portfolio-square)、[热力图](/heatmap)、[Serenity](/serenity)、[Alpha洞察](/alpha-insight)。
 - 想接收提醒，读 [信号](/alerts) 和 [配置管理](/settings)。

@@ -192,6 +192,9 @@ async function main() {
     await shot(page, 'dashboard')
     await shot(page, 'portfolio-sidebar')
 
+    await clickIfVisible(page, page.locator('.center-tab').filter({ hasText: '持仓' }), 5000)
+    await shot(page, 'holdings')
+
     await selectFirstStock(page)
     await clickIfVisible(page, page.getByRole('tab', { name: '图表' }), 5000)
     await shot(page, 'chart')

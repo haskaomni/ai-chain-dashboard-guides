@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 const guidePages = [
   { text: '登录与权限', link: '/login' },
   { text: '主看板', link: '/dashboard' },
+  { text: '持仓', link: '/holdings' },
   { text: '组合树', link: '/portfolio-sidebar' },
   { text: '图表', link: '/chart' },
   { text: '公司详情', link: '/stock-detail' },
@@ -52,19 +53,19 @@ export default defineConfig({
       },
       {
         text: '核心工作区',
-        items: guidePages.slice(1, 5),
+        items: guidePages.slice(1, 6),
       },
       {
         text: '发现页',
-        items: guidePages.slice(5, 14),
+        items: guidePages.slice(6, 15),
       },
       {
         text: '组合内容',
-        items: guidePages.slice(14, 18),
+        items: guidePages.slice(15, 19),
       },
       {
         text: '设置',
-        items: guidePages.slice(18),
+        items: guidePages.slice(19),
       },
     ],
     outline: { label: '本页目录', level: [2, 3] },
